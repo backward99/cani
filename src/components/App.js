@@ -1,11 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AppRouter from "components/Router";
 import {authService} from "myBase";
 
 function App() {
-  const [IsLoggedin, setIsLoggedin] = useState(authService.currentUser);
+  const [Init, setInit] = useState(false);
+  const [UserObj, setUserObj] = useState(null);
+  const refreshUser = () =>{
+    const user = authService.currentUser;
+    setUserObj({
+      displayName : user.displayName,
+      uid : user.uid,
+      updateProfile : (args) => user.updateProfile(args),
+    });
+  }
+  
+  useEffect(() => {
+    authService.onAuthStateChanged((user) => {
+      if(user){
+        // setUserObj(user);
+        setUserObj({
+          displayName : user.displayName,
+          uid : user.uid,
+          updateProfile : (args) => user.updateProfile(args),
+        });
+      } else {
+        setUserObj(null);
+      }
+      setInit(true);
+    });
+    return () => {
+      
+    }
+  }, [])
+  
+
   return (
-    <><AppRouter IsLoggedin={IsLoggedin}/>
+    <>
+    {Init? <AppRouter refreshUser={refreshUser} IsLoggedin={Boolean(UserObj)} UserObj={UserObj} /> : "Initializing..."}
     <footer>&copy; ican {new Date().getFullYear()}</footer>
     </>
   );
