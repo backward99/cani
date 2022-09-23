@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/cani/static/js/main.103b43eb.js",
+    "main.css": "/cani/static/css/main.c74f7f01.css",
+    "main.js": "/cani/static/js/main.c4156d77.js",
     "index.html": "/cani/index.html",
-    "main.103b43eb.js.map": "/cani/static/js/main.103b43eb.js.map"
+    "main.c74f7f01.css.map": "/cani/static/css/main.c74f7f01.css.map",
+    "main.c4156d77.js.map": "/cani/static/js/main.c4156d77.js.map"
   },
   "entrypoints": [
-    "static/js/main.103b43eb.js"
+    "static/css/main.c74f7f01.css",
+    "static/js/main.c4156d77.js"
   ]
 }
