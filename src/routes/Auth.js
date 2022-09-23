@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { authService, firebaseInstance } from "myBase";
-
+import "style.css"
 const Auth = () => {
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
@@ -50,13 +50,13 @@ const Auth = () => {
         console.log(data);
     }
     return (
-        <div>
+        <div className="container">
             <form onSubmit={onSubmit}>
                 <input name="email" type="text" placeholder="Email" required value={Email}
                     onChange={onChange} />
                 <input name="password" type="password" placeholder="Password" required value={Password}
                     onChange={onChange} />
-                <input type="submit" value={NewAccount ? "Create Account" : "Log In"} />
+                <input className="authSubmit" type="submit" value={NewAccount ? "Create Account" : "Log In"} />
                 {Error}
             </form>
             <h1 onClick={toggleAccount}>{NewAccount ? "Sign In" : "Create Account"}</h1>

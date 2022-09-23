@@ -34,7 +34,8 @@ const Ican = ({ IcanObj, isOwner }) => {
                     Cancel
                 </button>
             </> :
-                <><h4>{IcanObj.text}</h4>
+                <>
+                <h4>{IcanObj.text}</h4>
                     {isOwner &&
                         <>
                             <button onClick={onDeleteClick}>Delete</button>

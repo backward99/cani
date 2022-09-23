@@ -37,7 +37,6 @@ function App() {
   return (
     <>
     {Init? <AppRouter refreshUser={refreshUser} IsLoggedin={Boolean(UserObj)} UserObj={UserObj} /> : "Initializing..."}
-    <footer>&copy; ican {new Date().getFullYear()}</footer>
     </>
   );
 }
