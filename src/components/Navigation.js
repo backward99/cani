@@ -9,7 +9,13 @@ const Navigation = ({UserObj}) => (
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/profile">{UserObj.displayName}님의 Profile</Link>
+                <Link to="/profile">File_Scan_result</Link>
+            </li>
+            <li>
+                <Link to="/yaraLog">Yara Log</Link>
+            </li>
+            <li>
+                <Link to="/webSource">Web Source</Link>
             </li>
         </ul>
     </nav>

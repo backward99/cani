@@ -4,6 +4,8 @@ import Auth from "../routes/Auth";
 import Home from "../routes/Home";
 import Navigation from "./Navigation";
 import Profile from "routes/Profile";
+import YaraLog from "routes/YaraLog";
+import WebSource from "routes/WebSource";
 
 const AppRouter = ({ refreshUser, IsLoggedin, UserObj }) => {
 
@@ -18,6 +20,12 @@ const AppRouter = ({ refreshUser, IsLoggedin, UserObj }) => {
                         </Route>
                         <Route path="/profile">
                             <Profile refreshUser={refreshUser} UserObj={UserObj} />
+                        </Route>
+                        <Route path="/yaraLog">
+                            <YaraLog />
+                        </Route>
+                        <Route path="/webSource">
+                            <WebSource  />
                         </Route>
                         <Redirect from="*" to="/" />
                     </> :

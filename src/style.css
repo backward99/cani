@@ -26,58 +26,34 @@ button{
     border-radius: 5px;
 }
 
-.nav{
-    margin-bottom: -3px;
-    position: relative;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 1080px;
+/* .nav{
+    justify-content: center;
 
-}
+} */
 .li{
     display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    justify-content: space-around;
 }
 
 .tlstprud{
-    width: 600px;
-    margin: 5em auto;
+    /* width: 600px; */
+    /* margin: 5em auto; */
     padding: 2em;
     background-color: #fdfdff;
     border-radius: 0.5em;
     box-shadow: 2px 3px 7px 2px rgb(0 0 0 / 2%);
-    /* color: rgb(var(--ig-primary-text));
-    /* display: flex; */
-    /* flex-direction: column;
-    flex-grow: 1; */
-        /* background-color: transparent; */
-    /* border: none;
-    align-items: center; */
-    /* background-color: rgb(var(--ig-primary-background)); */
-    /* background-color: rgba(255, 255, 255, 1);
-    border: 1px solid rgb(var(--ig-elevated-separator));
-    border-radius: 1px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    font: inherit;
-    font-size: 100%;
-    margin: 0 0 10px;
-    padding: 10px 0;
-    position: relative;
-    vertical-align: baseline;  */
+    display: block
+}
+
+.btSiteName{
+    display:flex;
+}
+
+.siteName{
+    display:flex;
+
+}
+
+.divSiteName{
+    flex-direction: row;
 }
