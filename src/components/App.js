@@ -7,7 +7,6 @@ function App() {
   const [UserObj, setUserObj] = useState(null);
   const refreshUser = () =>{
     const user = authService.currentUser;
-    console.log('authService.currentUser',authService.currentUser);
     setUserObj({
       displayName : user.displayName,
       uid : user.uid,
@@ -16,9 +15,9 @@ function App() {
   }
   
   useEffect(() => {
+    //사용자의 로그인 상태 변경을 관찰하는 기능
     authService.onAuthStateChanged((user) => {
       if(user){
-        // setUserObj(user);
         setUserObj({
           displayName : user.displayName,
           uid : user.uid,

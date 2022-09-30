@@ -11,7 +11,7 @@ const Profile = ({ UserObj }) => {
 
     useEffect(() => {
         const col = "url_scan_rt\\"
-        dbService.collection("file_scan_rt\\").onSnapshot((snapshot) => {
+        dbService.collection("FILE_scan_rt").onSnapshot((snapshot) => {
 
             const icanArray = snapshot.docs.map((doc) => ({
                 id: doc.id,
@@ -27,9 +27,12 @@ const Profile = ({ UserObj }) => {
     const onClickJson = (event) => {
         if (event.target.tagName !== "BUTTON") return;
 
-        if (Texts[+event.target.dataset.number].data !== "undefined" && Texts[+event.target.dataset.number].data !== undefined) {
+        if (Texts[+event.target.dataset.number].data[0] !== "undefined" && Texts[+event.target.dataset.number].data[0] !== undefined) {
             const readJson = Object.entries(Texts[+event.target.dataset.number].data.attributes.last_analysis_results);
             setJson(readJson);
+        } else if (Texts[+event.target.dataset.number].data.length === 0) {
+            setJson([]);
+            console.log(Json);
         }
 
     }
@@ -54,15 +57,19 @@ const Profile = ({ UserObj }) => {
             {Uploading ?
                 <>
                     {<div className="tlstprud" style={{ position: "fixed", top: 0, right: 0, left: 0, bottom: 0, margin: "auto", width: "70vw", height: "70vh" }}>
-                        뭐야 나랑 장난해?
+                        {(Json.length === 0) ?
+                        <div>탐지되지 않음</div>
+                        : 
+                        <> 
                         {Json && (
                             <>
-                                <div>dlqnqnsdla</div>
                                 {Json.map((json) => (
                                     <LookJson key={json[1].engine_name} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
                                 ))}
                             </>
                         )}
+                        </> }
+                        
                     </div>}
                 </> : <div></div>}
         </div>

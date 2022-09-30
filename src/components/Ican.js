@@ -9,7 +9,7 @@ const Ican = ({ IcanObj, Index }) => {
 
     return (
         <div >
-            <h2 className="siteName">검사한 사이트 : {IcanObj.id}</h2>
+            <h2 className="siteName">{IcanObj.id}</h2>
         </div>
     )
 }
