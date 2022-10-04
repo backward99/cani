@@ -4,6 +4,7 @@ import { dbService } from "myBase";
 import React, { useState, useEffect } from "react";
 import "style.css";
 
+
 const Profile = ({ UserObj }) => {
     const [Texts, setTexts] = useState([]);
     const [Json, setJson] = useState([]);
@@ -22,8 +23,7 @@ const Profile = ({ UserObj }) => {
         });
 
     }, [])
-
-
+    
     const onClickJson = (event) => {
         if (event.target.tagName !== "BUTTON") return;
 
@@ -34,11 +34,9 @@ const Profile = ({ UserObj }) => {
             setJson([]);
             console.log(Json);
         }
-
     }
     const toggleJson = () => {
         setUploading((prev) => !prev);
-
     }
     const onClickModal = () => {
         setUploading((prev) => !prev);
@@ -60,20 +58,18 @@ const Profile = ({ UserObj }) => {
             {Uploading ?
                 <>
                     <div className="modal">
-
                         <div className="tlstprud">
                             {(Json.length === 0) ?
-                            <>
-                                    <button onClick={onClickModal} className="btModal">x</button>
-
-                                <div>탐지되지 않음</div>
+                                <>
+                                    <div className="tlstprud" style={{ background: "#ffffff00" }}>
+                                        <button onClick={onClickModal} className="btModal">x</button>
+                                    </div>
+                                    <div className="noData">탐지되지 않음</div>
                                 </>
                                 :
                                 <>
                                     <button onClick={onClickModal} className="btModal">x</button>
-
                                     {Json && (
-
                                         <>
                                             {Json.map((json) => (
                                                 <LookJson key={json[1].engine_name} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />

@@ -3,7 +3,7 @@ import LookJson from "components/LookJson";
 import { dbService } from "myBase";
 import React, { useState, useEffect } from "react";
 import "style.css";
-
+import LookYara from "components/LookYara";
 import LookJson2 from "components/LookJson2";
 
 const YaraLog = ({ UserObj }) => {
@@ -79,11 +79,12 @@ const YaraLog = ({ UserObj }) => {
                         <div className="modal">
 
                             <div className="tlstprud">
+                                <div className="tlstprud" style={{ background: "#ffffff00" }}>
 
-                                <button onClick={toggleJson} className="btModal">x</button>
-
+                                    <button onClick={toggleJson} className="btModal">x</button>
+                                </div>
                                 {RpJson.map((json, index) => (
-                                    <LookJson2 key={index} jsonObj2={json} />
+                                    <LookYara key={index} jsonObj2={json} />
                                 ))}
 
 
@@ -93,22 +94,28 @@ const YaraLog = ({ UserObj }) => {
                                             <>
                                                 <h2>{Yara[0]}</h2>
                                                 {Yara3.length !== 0 ?
-                                                    <div>{Yara3[0]} : {Yara3[1]}</div>
+                                                <>
+                                                    <h4>{Yara3[0]} </h4>
+                                                    <div>{Yara3[1]}</div>
 
-
+                                                    </>
                                                     :
                                                     <div></div>
-                                                }/
+                                                }
+                                                <table>
                                                 {Yara2.map((json, index) => (
                                                     <LookJson key={index} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
                                                 ))}
+                                                </table>
                                             </>
                                             :
                                             <>
+                                                <table>
                                                 <div>{Yara[0]}</div>
                                                 {Yara.map((json, index) => (
                                                     <LookJson key={json[0]} jsonObjKey={json[1][index]} jsonObjValue={Object.entries(json[1])} isYara={Yara3} />
                                                 ))}
+                                                </table>
                                             </>
                                         }
                                     </>
@@ -121,14 +128,15 @@ const YaraLog = ({ UserObj }) => {
                     </>
                         : <>
                             <div className="modal">
-
                                 <div className="tlstprud">
-                                    <button onClick={toggleJson} className="btModal">x</button>
+                                    <div className="tlstprud" style={{ background: "#ffffff00" }}>
 
+                                        <button onClick={toggleJson} className="btModal">x</button>
+                                    </div>
                                     {Json &&
                                         <>
                                             {Json.map((json, index) => (
-                                                <LookJson2 key={index} jsonObj2={json} />
+                                                <LookYara key={index} jsonObj2={json} />
                                             ))}
                                         </>
                                     }
