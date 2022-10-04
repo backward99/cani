@@ -23,7 +23,7 @@ const Profile = ({ UserObj }) => {
         });
 
     }, [])
-    
+
     const onClickJson = (event) => {
         if (event.target.tagName !== "BUTTON") return;
 
@@ -58,17 +58,19 @@ const Profile = ({ UserObj }) => {
             {Uploading ?
                 <>
                     <div className="modal">
+                    <button onClick={toggleJson} className="btModal"><h1>X</h1></button>
+
                         <div className="tlstprud">
                             {(Json.length === 0) ?
                                 <>
-                                    <div className="tlstprud" style={{ background: "#ffffff00" }}>
-                                        <button onClick={onClickModal} className="btModal">x</button>
-                                    </div>
+                                                            {/* <button onClick={onClickModal} className="btModal"><h1>X</h1></button> */}
+
                                     <div className="noData">탐지되지 않음</div>
                                 </>
                                 :
                                 <>
-                                    <button onClick={onClickModal} className="btModal">x</button>
+                                                        {/* <button onClick={onClickModal} className="btModal"><h1>X</h1></button> */}
+
                                     {Json && (
                                         <>
                                             {Json.map((json) => (

@@ -58,6 +58,7 @@ const YaraLog = ({ UserObj }) => {
         setUploading((prev) => !prev);
     }
 
+
     return (
         <div className="home">
             <div onClick={onClickJson}>
@@ -77,12 +78,10 @@ const YaraLog = ({ UserObj }) => {
                 <>
                     {RpJson.length !== 0 ? <>
                         <div className="modal">
+                        <button onClick={toggleJson} className="btModal"><h1>X</h1></button>
 
                             <div className="tlstprud">
-                                <div className="tlstprud" style={{ background: "#ffffff00" }}>
-
-                                    <button onClick={toggleJson} className="btModal">x</button>
-                                </div>
+                                
                                 {RpJson.map((json, index) => (
                                     <LookYara key={index} jsonObj2={json} />
                                 ))}
@@ -102,20 +101,19 @@ const YaraLog = ({ UserObj }) => {
                                                     :
                                                     <div></div>
                                                 }
-                                                <table>
+                                                
                                                 {Yara2.map((json, index) => (
                                                     <LookJson key={index} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
                                                 ))}
-                                                </table>
-                                            </>
+                                                                                            </>
                                             :
                                             <>
-                                                <table>
+                                                
                                                 <div>{Yara[0]}</div>
                                                 {Yara.map((json, index) => (
                                                     <LookJson key={json[0]} jsonObjKey={json[1][index]} jsonObjValue={Object.entries(json[1])} isYara={Yara3} />
                                                 ))}
-                                                </table>
+                                                
                                             </>
                                         }
                                     </>
@@ -128,11 +126,10 @@ const YaraLog = ({ UserObj }) => {
                     </>
                         : <>
                             <div className="modal">
-                                <div className="tlstprud">
-                                    <div className="tlstprud" style={{ background: "#ffffff00" }}>
+                    <button onClick={toggleJson} className="btModal"><h1>X</h1></button>
 
-                                        <button onClick={toggleJson} className="btModal">x</button>
-                                    </div>
+                                <div className="tlstprud">
+                                    
                                     {Json &&
                                         <>
                                             {Json.map((json, index) => (

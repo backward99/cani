@@ -71,25 +71,10 @@ const Home = ({ UserObj }) => {
 
             {Uploading ?
                 <>
-                    <table>
-                        <thead>
-                        <th>이게 왜 안됨</th>
-                        </thead>
-                        <tbody>
-                        <tr>이렇게 한줄만들고
-                            <td>이게 첫번 째 칸이고</td>
-                            <td>이게 두번 째 칸이고</td>
-                        </tr>
-                        </tbody>
-                    </table>
                     <div className="modal">
-                        
+                    <button onClick={onClickModal} className="btModal"><h1>X</h1></button>
                         <div className="tlstprud" >
-                        <div className="tlstprud" style={{background:"#ffffff00"}}>
-
-                        <button onClick={onClickModal} className="btModal">x</button>
-                        </div>
-                        <div>
+                        <div className="grid">
                             {Json.error !== undefined && Json.error !== "undefined" ?
                                 <div>탐지가 방지된 사이트</div> :
                                  <>{Json && (
