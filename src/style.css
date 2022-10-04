@@ -1,7 +1,15 @@
 body {
     margin: 0;
+    background-color: #202124;
+
 }
 
+.roading{
+    display: flex;
+    justify-content: center;
+    padding-top: 42.4vh;
+    color: #eeeeee;
+}
 .container {
     height: 100vh;
     background: rgb(53, 54, 58);
@@ -15,7 +23,8 @@ body {
 
 .home {
     height: 100vh;
-    background-color: #aad7f1;
+    /* background-color: #aad7f1; */
+    /* background-color: #a79bcb; */
     /* background:#eeeeee; */
     display: flex;
     position: relative;
@@ -25,7 +34,10 @@ body {
 }
 
 #root {
-    background-color: #aad7f1;
+    /* background-color: #aad7f1; */
+    /* background-color: #a79bcb; */
+    background-color: #202124;
+
 }
 
 .authSubmit {
@@ -39,14 +51,18 @@ button {
 }
 
 nav{
-    padding: 12.3px 150px;
-    background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat;
+    padding: 14.3px 150px;
+    /* background-color: #c58ee0; */
+    background-color: #292a2d;
+    
+    /* background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat; */
     margin: 0;
 }
 
 .nav {
-    background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat;
-    height: 8vh;
+    
+    /* background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat; */
+    /* height: 8vh; */
     
     justify-content: space-around;
     align-self: center;
@@ -71,9 +87,11 @@ ul {
     justify-content: space-around; 
     align-content: center;
     list-style: none;
-    background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat;
+    /* background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat; */
     margin: 0;
     padding: 0;
+    background-color: #292a2d;
+    
     
 }
 
@@ -161,8 +179,10 @@ li {
 }
 
 .btModal {
-    position: fixed;
-    left: 73.5vw;
+    position: absolute;
+    right: 15px;
+    /* position: fixed; */
+    /* left: 73.5vw; */
     background-color: #eeeeee;
 }
 

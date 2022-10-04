@@ -36,7 +36,7 @@ function App() {
 
   return (
     <>
-    {Init? <AppRouter refreshUser={refreshUser} IsLoggedin={Boolean(UserObj)} UserObj={UserObj} /> : "Initializing..."}
+    {Init? <AppRouter refreshUser={refreshUser} IsLoggedin={Boolean(UserObj)} UserObj={UserObj} /> : <h1 className="roading">Initializing...</h1>}
     </>
   );
 }

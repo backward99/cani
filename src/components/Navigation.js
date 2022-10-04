@@ -8,10 +8,10 @@ const Navigation = ({ UserObj }) => (
             <nav>
                 <ul className="li">
                     <li >
-                        <Link to="/">Home</Link>
+                        <Link to="/">Url Scan Rusult</Link>
                     </li>
                     <li>
-                        <Link to="/profile">File_Scan_result</Link>
+                        <Link to="/profile">File Scan Result</Link>
                     </li>
                     <li>
                         <Link to="/yaraLog">Yara Log</Link>
