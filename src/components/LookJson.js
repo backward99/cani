@@ -2,6 +2,7 @@ import React from "react"
 import LookJson2 from "components/LookJson2";
 
 const LookJson = ({ jsonObjKey, jsonObjValue, isYara }) => {
+    jsonObjValue.sort();
     return (
         <>
             <div >

@@ -19,20 +19,22 @@ const Home = ({ UserObj }) => {
                 ...doc.data(),
             }));
             setTexts(icanArray);
-        });    
+        });
     }, [])
 
 
     const onClickJson = (event) => {
         if (event.target.tagName !== "BUTTON") return;
 
-        try{
+        try {
             if (Texts[+event.target.dataset.number].data !== "undefined" && Texts[+event.target.dataset.number].data !== undefined) {
-                    const readJson = Object.entries(Texts[+event.target.dataset.number].data.attributes.last_analysis_results);
-                    setJson(readJson);
-                }
-        }catch(error){
+                const readJson = Object.entries(Texts[+event.target.dataset.number].data.attributes.last_analysis_results);
+                readJson.sort();
+                setJson(readJson);
+            }
+        } catch (error) {
             const readJson = Object.entries(Texts[+event.target.dataset.number].error);
+            readJson.sort();
             setJson(readJson);
         }
 
@@ -49,6 +51,9 @@ const Home = ({ UserObj }) => {
         setUploading((prev) => !prev);
     }
 
+    const onClickModal = () => {
+        setUploading((prev) => !prev);
+    }
     return (
         <div className="home">
             <div onClick={onClickJson}>
@@ -66,17 +71,21 @@ const Home = ({ UserObj }) => {
 
             {Uploading ?
                 <>
-                    {<div className="tlstprud" style={{ position: "fixed", top: 0, right: 0, left: 0, bottom: 0, margin: "auto", width: "70vw", height: "70vh" }}>
-                        {Json.error !== undefined && Json.error !== "undefined" ? 
-                         <div>탐지가 방지된 사이트</div>: <>{Json && (
-                            <>
-                                {Json.map((json) => (
-                                    <LookJson key={json[1].engine_name} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
-                                ))}
-                            </>
-                        )}</>}
+                    <div className="modal">
                         
-                    </div>}
+                        <div className="tlstprud" >
+                        <button onClick={onClickModal} className="btModal">x</button>
+                            {Json.error !== undefined && Json.error !== "undefined" ?
+                                <div>탐지가 방지된 사이트</div> : <>{Json && (
+                                    <>
+                                        {Json.map((json) => (
+                                            <LookJson key={json[1].engine_name} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
+                                        ))}
+                                    </>
+                                )}</>}
+
+                        </div>
+                    </div>
                 </> : <div></div>}
         </div>
     )

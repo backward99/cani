@@ -76,8 +76,12 @@ const YaraLog = ({ UserObj }) => {
             {Uploading ?
                 <>
                     {RpJson.length !== 0 ? <>
-                        {<div className="tlstprud" style={{ position: "fixed", top: 0, right: 0, left: 0, bottom: 0, margin: "auto", width: "70vw", height: "70vh" }}>
-                            <>
+                        <div className="modal">
+
+                            <div className="tlstprud">
+
+                                <button onClick={toggleJson} className="btModal">x</button>
+
                                 {RpJson.map((json, index) => (
                                     <LookJson2 key={index} jsonObj2={json} />
                                 ))}
@@ -94,7 +98,7 @@ const YaraLog = ({ UserObj }) => {
 
                                                     :
                                                     <div></div>
-                                                }
+                                                }/
                                                 {Yara2.map((json, index) => (
                                                     <LookJson key={index} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
                                                 ))}
@@ -111,18 +115,24 @@ const YaraLog = ({ UserObj }) => {
                                     :
                                     <div></div>
                                 }
-                            </>
-                        </div>}
+
+                            </div>
+                        </div>
                     </>
                         : <>
-                            <div className="tlstprud" style={{ position: "fixed", top: 0, right: 0, left: 0, bottom: 0, margin: "auto", width: "70vw", height: "70vh" }}>
-                                {Json &&
-                                    <>
-                                        {Json.map((json, index) => (
-                                            <LookJson2 key={index} jsonObj2={json} />
-                                        ))}
-                                    </>
-                                }
+                            <div className="modal">
+
+                                <div className="tlstprud">
+                                    <button onClick={toggleJson} className="btModal">x</button>
+
+                                    {Json &&
+                                        <>
+                                            {Json.map((json, index) => (
+                                                <LookJson2 key={index} jsonObj2={json} />
+                                            ))}
+                                        </>
+                                    }
+                                </div>
                             </div>
                         </>
                     }
@@ -130,6 +140,5 @@ const YaraLog = ({ UserObj }) => {
         </div>
     )
 }
-
 
 export default YaraLog;

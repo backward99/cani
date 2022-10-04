@@ -1,7 +1,8 @@
-body{
+body {
     margin: 0;
 }
-.container{
+
+.container {
     height: 100vh;
     background: rgb(53, 54, 58);
     display: flex;
@@ -9,62 +10,177 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    
-}
-.home{
-    height: 100vh;
-    background: rgb(53, 54, 58);
-    display: flex;
-    
+
 }
 
-.authSubmit{
+.home {
+    height: 100vh;
+    background-color: #aad7f1;
+    /* background:#eeeeee; */
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+
+}
+
+#root {
+    background-color: #aad7f1;
+}
+
+.authSubmit {
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
 }
-button{
+
+button {
     border-radius: 5px;
+    border-width: 0px;
 }
 
-/* .nav{
-    justify-content: center;
+nav{
+    padding: 12.3px 150px;
+    background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat;
+    margin: 0;
+}
+
+.nav {
+    background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat;
+    height: 8vh;
+    
+    justify-content: space-around;
+    align-self: center;
+    /* align-items: center; */
+}
+
+/* .nav2{
+    display: flex;
+    justify-content: space-around; 
+    
+    background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat;
 
 } */
-.li{
+/* .li {
     display: flex;
     justify-content: space-around;
+    background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat;
+} */
+
+ul {
+    display: flex;
+    justify-content: space-around; 
+    align-content: center;
+    list-style: none;
+    background: url(https://ssl.nexon.com/s2/game/maplestory/renewal/common/issue_bg.png) center top no-repeat;
+    margin: 0;
+    padding: 0;
+    
 }
 
-.tlstprud{
-    /* width: 600px; */
-    /* margin: 5em auto; */
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* color: #555555; */
+    color: #eeeeee;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-decoration: none;
+}
+
+li {
+    display: flex;
+}
+
+.tlstprud {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50vw;
+    height: 70vh;
     padding: 2em;
+    padding-top: 1em;
     background-color: #fdfdff;
     border-radius: 0.5em;
     box-shadow: 2px 3px 7px 2px rgb(0 0 0 / 2%);
     display: block;
     max-height: calc(100vh - 210px);
     overflow-y: auto;
-    
-}
-::-webkit-scrollbar{ width:10px;height:10px; border-radius:50px;}
-::-webkit-scrollbar-track{background-color:#E8E8E8; border-radius:50px;}
-::-webkit-scrollbar-thumb{background:#1E1E1E;border-radius:50px; }
-::-webkit-scrollbar-thumb:hover{background:#1E1E1E;}
-::-webkit-scrollbar-thumb:active{background:#1E1E1E;}
-::-webkit-scrollbar-button { display: none; }
- 
 
-
-.btSiteName{
-    display:flex;
-}
-
-.siteName{
-    display:flex;
 
 }
 
-.divSiteName{
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #E8E8E8;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E1E1E;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #1E1E1E;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+
+.btSiteName {
+    display: flex;
+}
+
+.siteName {
+    display: flex;
+    color: #eeeeee;
+}
+
+.divSiteName {
     flex-direction: row;
+}
+
+.btModal {
+    position: fixed;
+    left: 73.5vw;
+    background-color: #eeeeee;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tlstprud.on {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.3s;
 }

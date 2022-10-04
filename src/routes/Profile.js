@@ -20,7 +20,7 @@ const Profile = ({ UserObj }) => {
             console.log(icanArray);
             setTexts(icanArray);
         });
-        
+
     }, [])
 
 
@@ -40,6 +40,9 @@ const Profile = ({ UserObj }) => {
         setUploading((prev) => !prev);
 
     }
+    const onClickModal = () => {
+        setUploading((prev) => !prev);
+    }
     return (
         <div className="home">
             <div onClick={onClickJson}>
@@ -56,21 +59,30 @@ const Profile = ({ UserObj }) => {
             </div>
             {Uploading ?
                 <>
-                    {<div className="tlstprud" style={{ position: "fixed", top: 0, right: 0, left: 0, bottom: 0, margin: "auto", width: "70vw", height: "70vh" }}>
-                        {(Json.length === 0) ?
-                        <div>탐지되지 않음</div>
-                        : 
-                        <> 
-                        {Json && (
+                    <div className="modal">
+
+                        <div className="tlstprud">
+                            {(Json.length === 0) ?
                             <>
-                                {Json.map((json) => (
-                                    <LookJson key={json[1].engine_name} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
-                                ))}
-                            </>
-                        )}
-                        </> }
-                        
-                    </div>}
+                                    <button onClick={onClickModal} className="btModal">x</button>
+
+                                <div>탐지되지 않음</div>
+                                </>
+                                :
+                                <>
+                                    <button onClick={onClickModal} className="btModal">x</button>
+
+                                    {Json && (
+
+                                        <>
+                                            {Json.map((json) => (
+                                                <LookJson key={json[1].engine_name} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
+                                            ))}
+                                        </>
+                                    )}
+                                </>}
+                        </div>
+                    </div>
                 </> : <div></div>}
         </div>
     )
