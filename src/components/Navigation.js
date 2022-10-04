@@ -8,7 +8,7 @@ const Navigation = ({ UserObj }) => (
             <nav>
                 <ul className="li">
                     <li >
-                        <Link to="/">Url Scan Rusult</Link>
+                        <Link to="/">Url Scan Result</Link>
                     </li>
                     <li>
                         <Link to="/profile">File Scan Result</Link>
