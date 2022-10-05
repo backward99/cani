@@ -5,9 +5,8 @@ const LookJson = ({ jsonObjKey, jsonObjValue, isYara }) => {
     jsonObjValue.sort();
     return (
         <>
-            <div>
-                {jsonObjKey && <h3 className="item"> {jsonObjKey} </h3>}
-                
+            <div className="grid" >
+                {jsonObjKey && <h4 className="item title prevent-overflow"> {jsonObjKey} </h4>}
                 {jsonObjValue && jsonObjValue.map((jsonObj, index) => (
                     <LookJson2 key={index} jsonObj2={jsonObj} />
                 ))}

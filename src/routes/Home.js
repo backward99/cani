@@ -74,7 +74,8 @@ const Home = ({ UserObj }) => {
                     <div className="modal">
                     <button onClick={onClickModal} className="btModal"><h1>X</h1></button>
                         <div className="tlstprud" >
-                        <div className="grid">
+                        <div className="outGrid">
+                        {/* <div className="grid"> */}
                             {Json.error !== undefined && Json.error !== "undefined" ?
                                 <div>탐지가 방지된 사이트</div> :
                                  <>{Json && (
@@ -84,7 +85,7 @@ const Home = ({ UserObj }) => {
                                         ))}
                                     </>
                                 )}</>}
-
+{/* </div> */}
                         </div>
                     </div>
                     </div>

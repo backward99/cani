@@ -7,12 +7,24 @@ import LookYara from "components/LookYara";
 import LookJson2 from "components/LookJson2";
 
 const YaraLog = ({ UserObj }) => {
+    
+    //맨 처음 배열로 받아온 값을 저장하는 곳
     const [Texts, setTexts] = useState([]);
+
+    
     const [Json, setJson] = useState([]);
+
+    //모달 표시
     const [Uploading, setUploading] = useState(false);
+    
+    //오브젝트 형식을 제외한 것만 담아놓을 곳
     const [RpJson, setRpJson] = useState([]);
+    //오보젝트 형식이면 담아놓을 곳
     const [Yara, setYara] = useState([]);
+
+    //오브젝트 형식만 담아놓을 곳
     const [Yara2, setYara2] = useState([]);
+    //스트링 형식만 담아 놓을 곳
     const [Yara3, setYara3] = useState([]);
 
     useEffect(() => {
@@ -44,7 +56,6 @@ const YaraLog = ({ UserObj }) => {
                         if (rJson2[1].constructor !== Object) {
                             setYara2(readJson3.filter(student => student[0] !== rJson2[0]));
                             setYara3(Object.values(rJson2));
-                            console.log(Object.values(rJson2));
                         }
                     });
                     setYara(prev => [...prev, ...readJson2]);
@@ -58,7 +69,7 @@ const YaraLog = ({ UserObj }) => {
         setUploading((prev) => !prev);
     }
 
-
+    console.log(Yara2);
     return (
         <div className="home">
             <div onClick={onClickJson}>
@@ -86,17 +97,21 @@ const YaraLog = ({ UserObj }) => {
                                     <LookYara key={index} jsonObj2={json} />
                                 ))}
 
-
+                                
                                 {Yara && Yara.length !== 0 ?
                                     <>
                                         {Yara2 && Yara2.length !== 0 ?
                                             <>
-                                                <h2>{Yara[0]}</h2>
+                                                <div className="stGrid">
+                                                <h4 className="item">{Yara[0]}</h4>
+                                                <div className="item">Detect</div>
+                                                </div>
                                                 {Yara3.length !== 0 ?
                                                 <>
-                                                    <h4>{Yara3[0]} </h4>
-                                                    <div>{Yara3[1]}</div>
-
+                                                    <div className="stGrid">
+                                                    <h5 className="item">{Yara3[0]} </h5>
+                                                    <div className="item">{Yara3[1]}</div>
+                                                    </div>
                                                     </>
                                                     :
                                                     <div></div>
@@ -137,6 +152,7 @@ const YaraLog = ({ UserObj }) => {
                                             ))}
                                         </>
                                     }
+                                    
                                 </div>
                             </div>
                         </>

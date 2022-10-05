@@ -4,9 +4,9 @@ const LookYara = ({jsonObj2}) => {
  return (
     <>
         
-                        <div>
-                            <h4>{jsonObj2[0]} </h4> 
-                            <div>{jsonObj2[1]}</div>
+                        <div className="Yara">
+                            <h4 className="item prevent-overflow">{jsonObj2[0]} </h4> 
+                            <div className="item">{jsonObj2[1]}</div>
                         </div>
                     </>
  )

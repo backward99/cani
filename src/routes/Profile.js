@@ -61,6 +61,7 @@ const Profile = ({ UserObj }) => {
                     <button onClick={toggleJson} className="btModal"><h1>X</h1></button>
 
                         <div className="tlstprud">
+                            
                             {(Json.length === 0) ?
                                 <>
                                                             {/* <button onClick={onClickModal} className="btModal"><h1>X</h1></button> */}
@@ -69,8 +70,9 @@ const Profile = ({ UserObj }) => {
                                 </>
                                 :
                                 <>
+                                <div className="outGrid">
                                                         {/* <button onClick={onClickModal} className="btModal"><h1>X</h1></button> */}
-
+                                    
                                     {Json && (
                                         <>
                                             {Json.map((json) => (
@@ -78,7 +80,10 @@ const Profile = ({ UserObj }) => {
                                             ))}
                                         </>
                                     )}
-                                </>}
+                                    </div>
+                                </>
+                                }
+                        
                         </div>
                     </div>
                 </> : <div></div>}

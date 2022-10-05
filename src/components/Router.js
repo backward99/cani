@@ -11,7 +11,7 @@ const AppRouter = ({ refreshUser, IsLoggedin, UserObj }) => {
 
     return (
         <Router>
-            {IsLoggedin && <Navigation UserObj={UserObj} />}
+            {IsLoggedin && <Navigation refreshUser={refreshUser} UserObj={UserObj} />}
             <Switch>
                 {IsLoggedin ?
                     <>
