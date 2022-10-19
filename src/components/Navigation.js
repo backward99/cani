@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "style.css";
 
@@ -18,7 +18,6 @@ const Navigation = ({refreshUser, UserObj }) => {
     console.log(location.pathname.includes("/"));
     return (
         <div className="nav">
-            {/* <div className="nav2"> */}
                 <nav>
                 <div className="navDns">
                 <img className="dnsImage2" alt="dns" src={logo} />
@@ -34,13 +33,9 @@ const Navigation = ({refreshUser, UserObj }) => {
                         <li className={ "selectNav"} >
                             <Link to="/yaraLog" className={location.pathname.match("/yaraLog") ? "selected" : ""} >Yara Log</Link>
                         </li>
-                        {/* <li>
-                            <Link to="/webSource">Web Source</Link>
-                        </li> */}
                     </ul>
                     <button className="btLogOut" onClick={onLogOutClick}> LogOut</button>
                 </nav>
-            {/* </div> */}
         </div>
     )
 }

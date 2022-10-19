@@ -37,14 +37,6 @@ const Home = ({ UserObj }) => {
             readJson.sort();
             setJson(readJson);
         }
-
-        // if (Texts[+event.target.dataset.number].data !== "undefined" && Texts[+event.target.dataset.number].data !== undefined) {
-        //     const readJson = Object.entries(Texts[+event.target.dataset.number].data.attributes.last_analysis_results);
-        //     setJson(readJson);
-        // } else if(Texts[+event.target.dataset.number].error !== "undefined" && Texts[+event.target.dataset.number].error !== undefined){
-        //     const readJson = Object.entries(Texts[+event.target.dataset.number].error);
-        //     setJson(readJson);
-        // }
     }
 
     const toggleJson = () => {
@@ -62,7 +54,6 @@ const Home = ({ UserObj }) => {
                         <Ican
                             key={ican.id}
                             IcanObj={ican}
-                            Index={index}
                         />
                         <button className="btSiteName" data-number={index} onClick={toggleJson}>View Result</button>
                     </div>
@@ -77,7 +68,7 @@ const Home = ({ UserObj }) => {
                         <div className="outGrid">
                         {/* <div className="grid"> */}
                             {Json.error !== undefined && Json.error !== "undefined" ?
-                                <div>탐지가 방지된 사이트</div> :
+                                <div>Sites that have been prevented from being detected</div> :
                                  <>{Json && (
                                     <>
                                         {Json.map((json) => (
@@ -85,7 +76,6 @@ const Home = ({ UserObj }) => {
                                         ))}
                                     </>
                                 )}</>}
-{/* </div> */}
                         </div>
                     </div>
                     </div>

@@ -5,9 +5,6 @@ const LookJson = ({ jsonObj2 }) => {
         <>
             <div className="item">{jsonObj2[0]}</div>
             <div className="item prevent-overflow"> {jsonObj2[1]}</div>
-            {/* <div>
-            {jsonObj2[0]} : {jsonObj2[1]}
-            </div> */}
         </>
     )
 }

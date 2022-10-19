@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { authService, firebaseInstance } from "myBase";
+import { authService} from "myBase";
 import "style.css";
 import logo from "images/dnsLogo.png";
 // import "dnsLogo.png"
 const Auth = () => {
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
-    const [NewAccount, setNewAccount] = useState(false);
-    const [Error, setError] = useState("");
     const onChange = (event) => {
         const {
             target: { name, value },
@@ -21,38 +19,32 @@ const Auth = () => {
     const onSubmit = async (event) => {
         event.preventDefault();
         try {
-            let data;
-            if (NewAccount) {
-                data = await authService.createUserWithEmailAndPassword(
-                    Email,
-                    Password
-                );
-            } else {
                 //로그인 기능
-                data = await authService.signInWithEmailAndPassword(
+                await authService.signInWithEmailAndPassword(
                     Email,
                     Password
                 );
-            }
-            
-            console.log(data);
         } catch (error) {
-            setError(error.message);
-
+            const errorCode = error.code;
+            switch (errorCode) {
+                case "auth/wrong-password":
+                    alert('Wrong password. Please check password');
+                    break;
+                case "auth/user-not-found":
+                    alert('User Not Found. Please check your email name');
+                    break;
+                case "auth/user-disabled":
+                    alert('User disabled. Please check your email name');
+                    break;
+                case "auth/invalid-email":
+                    alert('Invalid email. Please check your email name');
+                    break;
+                // no default
+                }
         }
     };
-    const toggleAccount = () => setNewAccount((prev)=> !prev);
-    // const onSocialClick = async (event) => {
-    //     const {
-    //         target : {name},
-    //     } = event;
-    //     let provider;
-    //     if (name === "google"){
-    //         provider = new firebaseInstance.auth.GoogleAuthProvider();
-    //     }
-    //     const data = await authService.signInWithPopup(provider);
-    //     console.log(data);
-    // }
+
+
     return (
         <div className="container">
             <div>
@@ -64,14 +56,7 @@ const Auth = () => {
                 <input name="password" type="password" placeholder="Password" required value={Password}
                     onChange={onChange} />
                 <input className="authSubmit" type="submit" value="Log In" />
-                {Error}
             </form>
-            {/* <h1 onClick={toggleAccount}>{NewAccount ? "Sign In" : "Create Account"}</h1> */}
-            {/* <div>
-                <button name="google" onClick={onSocialClick}>
-                    Continue with Google
-                </button>
-            </div> */}
         </div>
     )
 };

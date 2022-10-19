@@ -1,12 +1,6 @@
-import { dbService, storageService } from "myBase";
-import React, { useState, useEffect } from "react";
-import LookJson from "components/LookJson";
-import Home from "routes/Home";
+import React from "react";
 
-const Ican = ({ IcanObj, Index }) => {
-
-
-
+const Ican = ({ IcanObj}) => {
     return (
         <div >
             <h2 className="siteName">{IcanObj.id}</h2>

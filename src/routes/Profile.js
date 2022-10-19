@@ -11,7 +11,6 @@ const Profile = ({ UserObj }) => {
     const [Uploading, setUploading] = useState(false);
 
     useEffect(() => {
-        const col = "url_scan_rt\\"
         dbService.collection("FILE_scan_rt").onSnapshot((snapshot) => {
 
             const icanArray = snapshot.docs.map((doc) => ({
@@ -38,9 +37,7 @@ const Profile = ({ UserObj }) => {
     const toggleJson = () => {
         setUploading((prev) => !prev);
     }
-    const onClickModal = () => {
-        setUploading((prev) => !prev);
-    }
+
     return (
         <div className="home">
             <div onClick={onClickJson}>
@@ -66,7 +63,7 @@ const Profile = ({ UserObj }) => {
                                 <>
                                                             {/* <button onClick={onClickModal} className="btModal"><h1>X</h1></button> */}
 
-                                    <div className="noData">탐지되지 않음</div>
+                                    <div className="noData">No detected</div>
                                 </>
                                 :
                                 <>

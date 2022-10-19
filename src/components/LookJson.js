@@ -10,7 +10,6 @@ const LookJson = ({ jsonObjKey, jsonObjValue, isYara }) => {
                 {jsonObjValue && jsonObjValue.map((jsonObj, index) => (
                     <LookJson2 key={index} jsonObj2={jsonObj} />
                 ))}
-                
             </div>
         </>
     )

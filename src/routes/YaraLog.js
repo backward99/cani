@@ -10,25 +10,15 @@ const YaraLog = ({ UserObj }) => {
 
     //맨 처음 배열로 받아온 값을 저장하는 곳
     const [Texts, setTexts] = useState([]);
-
-
     const [Json, setJson] = useState([]);
-
     //모달 표시
     const [Uploading, setUploading] = useState(false);
-
     const [DetectView, setDetectView] = useState(false);
-
-
-
     //오브젝트 형식을 제외한 것만 담아놓을 곳
     const [RpJson, setRpJson] = useState([]);
     //오보젝트 형식이면 담아놓을 곳
     // const [Black, setBlack] = useState([]);
-
-
     const [Yara, setYara] = useState([]);
-
     //오브젝트 형식만 담아놓을 곳
     const [Yara2, setYara2] = useState([]);
     //스트링 형식만 담아 놓을 곳
@@ -120,7 +110,7 @@ const YaraLog = ({ UserObj }) => {
                                                         <><div className="stGrid" onClick={toggleDetect}>
                                                             <h4 className="item">{json}</h4>
                                                             {Yara3.length !== 0 &&
-                                                                <div className="item">{Yara3[0]} : {Yara3[1]}</div>
+                                                                <div className="item detect" >{Yara3[0]} : {Yara3[1]}</div>
 
                                                             }
                                                         </div></>
@@ -152,9 +142,6 @@ const YaraLog = ({ UserObj }) => {
                                     :
                                     <div></div>
                                 }
-
-
-
                             </div>
                         </div>
                     </>
