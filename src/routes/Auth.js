@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { authService, firebaseInstance } from "myBase";
-import "style.css"
+import "style.css";
+import logo from "images/dnsLogo.png";
+// import "dnsLogo.png"
 const Auth = () => {
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
@@ -36,6 +38,7 @@ const Auth = () => {
             console.log(data);
         } catch (error) {
             setError(error.message);
+
         }
     };
     const toggleAccount = () => setNewAccount((prev)=> !prev);
@@ -52,6 +55,9 @@ const Auth = () => {
     // }
     return (
         <div className="container">
+            <div>
+                <img className="dnsImage" alt="dns" src={logo} />
+            </div>
             <form onSubmit={onSubmit}>
                 <input name="email" type="text" placeholder="Email" required value={Email}
                     onChange={onChange} />
@@ -60,7 +66,7 @@ const Auth = () => {
                 <input className="authSubmit" type="submit" value="Log In" />
                 {Error}
             </form>
-            <h1 onClick={toggleAccount}>{NewAccount ? "Sign In" : "Create Account"}</h1>
+            {/* <h1 onClick={toggleAccount}>{NewAccount ? "Sign In" : "Create Account"}</h1> */}
             {/* <div>
                 <button name="google" onClick={onSocialClick}>
                     Continue with Google

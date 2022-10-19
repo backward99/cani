@@ -51,7 +51,7 @@ const Profile = ({ UserObj }) => {
                             IcanObj={ican}
                             Index={index}
                         />
-                        <button className="btSiteName" data-number={index} onClick={toggleJson}>View Json</button>
+                        <button className="btSiteName" data-number={index} onClick={toggleJson}>View Result</button>
                     </div>
                 ))}
             </div>
@@ -60,7 +60,7 @@ const Profile = ({ UserObj }) => {
                     <div className="modal">
                     <button onClick={toggleJson} className="btModal"><h1>X</h1></button>
 
-                        <div className="tlstprud">
+                        <div className={"tlstprud" + (Json.length === 0 && " blank")}>
                             
                             {(Json.length === 0) ?
                                 <>

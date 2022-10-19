@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #202124;
+    background-color: #F8F8F8;
 }
 
 h2,h3, h4, h5{
@@ -16,12 +16,17 @@ h2,h3, h4, h5{
 }
 .container {
     height: 100vh;
-    background: rgb(53, 54, 58);
+    background:  #F8F8F8;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+input{
+    border-radius: 10px;
+    border-width: 1px;
 }
 
 .home {
@@ -33,13 +38,14 @@ h2,h3, h4, h5{
 }
 
 #root {
-    background-color: #202124;
+    background-color: #F8F8F8;
 
 }
 
 .authSubmit {
-    background: rgba(255, 255, 255, 1);
+    background: #1d9bf0;
     border-radius: 10px;
+    
 }
 
 button {
@@ -49,8 +55,9 @@ button {
 
 
 nav{
-    padding: 14.3px 150px;
-    background-color: #292a2d;
+    /* padding: 14.3px 150px; */
+    padding: 0px 150px;
+    background-color: #2080E1;
     
     margin: 0;
 }
@@ -63,30 +70,93 @@ nav{
 }
 
 ul {
+    height: 52.16px;
     display: flex;
     justify-content: space-around; 
     align-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #292a2d;
+    background-color: #2080E1;
     
     
 }
 
-a {
+a{
+    height: 49px;
+    display: flex;
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     /* color: #555555; */
-    color: #eeeeee;
+    color: #F8F8F8;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.2em;
     text-decoration: none;
+    align-items: center;
+    align-self: center;
 }
 
+.dnsImage{
+    width: 200px;
+}
+
+.dnsImage2{
+    width: 70px;
+}
+
+.navDns{
+    display: flex;
+    position: absolute;
+    left: 3%;
+    top: 1.5%;
+    /* align-content: center; */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .selectNav:focus-visible {
+    border-bottom: 2px solid #F8F8F8;
+    text-decoration: underline;
+    color: #F8F8F8;
+  }
+   */
+/* li:focus{
+    
+    border-bottom: 2px solid #F8F8F8;
+
+} */
+
+.selected{
+    
+    border-bottom: 3px solid #F8F8F8;
+
+}
+
+div.blank{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20vw;
+    height: 10vh;
+    padding: 1em;
+    padding-top: 1em;
+    background-color: #fdfdff;
+    border-radius: 0.5em;
+    box-shadow: 2px 3px 7px 2px rgb(0 0 0 / 2%);
+    display: flex;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+
+}
 li {
     display: flex;
 }
@@ -166,7 +236,7 @@ div::-webkit-scrollbar {
 
 .siteName {
     display: flex;
-    color: #eeeeee;
+    color:#2A2A2A ;
 }
 
 .divSiteName {
@@ -221,7 +291,7 @@ div::-webkit-scrollbar {
     border: 1px solid #ffffff;
     display: flex;
     padding-right: 5px;
-    background-color: #6868681c;
+    /* background-color: #6868681c; */
     white-space: nowrap;
 
 }
@@ -247,8 +317,16 @@ h4.title{
     display: flex;
     grid-column: span 2;
     justify-content: center;
-    background-color: #68686838;
+    background-color:  #879FED;
+    color:#F8F8F8 ;
+    
+    /* background-color: #68686838; */
     align-items: center;
+}
+
+h4.item{
+    background-color:  #879FED;
+    color:#F8F8F8 ;
 }
 
 .btModal h1{
@@ -284,12 +362,12 @@ h4.title{
     position: absolute;
     right: 20px;
     top: 18px;
-    background-color: #292a2d;
+    background-color: #2080E1;
     color: #e3dede;
 }
 
 .btLogOut:hover{
-    background-color: #1E1E1E;
+    background-color: #1d9bf0;
 }
 
 button:hover{

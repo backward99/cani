@@ -64,7 +64,7 @@ const Home = ({ UserObj }) => {
                             IcanObj={ican}
                             Index={index}
                         />
-                        <button className="btSiteName" data-number={index} onClick={toggleJson}>View Json</button>
+                        <button className="btSiteName" data-number={index} onClick={toggleJson}>View Result</button>
                     </div>
                 ))}
             </div>
