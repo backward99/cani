@@ -147,6 +147,11 @@ a{
 
 }
 
+div.formName{
+    font-weight: bold;
+    background-color: #2a2a2a11;
+}
+
 div.blank{
     position: fixed;
     top: 0;
@@ -223,7 +228,7 @@ div::-webkit-scrollbar {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1E1E1E;
+    background: #2080e193;
     border-radius: 50px;
 }
 
@@ -239,6 +244,17 @@ div::-webkit-scrollbar {
     display: none;
 }
 
+div::-webkit-scrollbar-thumb {
+    background: #2080E1;
+    border-radius: 50px;
+}
+
+
+.tlstprud::-webkit-scrollbar {
+    width: 10px;
+    height: 15px;
+    border-radius: 50px;
+}
 
 
 .btSiteName {
@@ -328,7 +344,8 @@ h4.title{
     display: flex;
     grid-column: span 2;
     justify-content: center;
-    background-color:  #879FED;
+    /* background-color:  #879FED; */
+    background-color:  #2080E1;
     color:#F8F8F8 ;
     
     /* background-color: #68686838; */
@@ -336,7 +353,7 @@ h4.title{
 }
 
 h4.item{
-    background-color:  #879FED;
+    background-color:  #2080E1;
     color:#F8F8F8 ;
 }
 
