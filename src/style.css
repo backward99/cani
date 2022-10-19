@@ -114,14 +114,15 @@ a{
 }
 
 .dnsImage2{
-    width: 70px;
+    /* width: 100px; */
+    height: 52px;
 }
 
 .navDns{
     display: flex;
     position: absolute;
-    left: 3%;
-    top: 1.5%;
+    left: 10px;
+    top: 1.5px;
     /* align-content: center; */
     margin: 0;
     padding: 0;
