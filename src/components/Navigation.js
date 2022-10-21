@@ -15,7 +15,6 @@ const Navigation = ({refreshUser, UserObj }) => {
         refreshUser();
     }
     let location = useLocation();
-    console.log(location.pathname.includes("/"));
     return (
         <div className="nav">
                 <nav>

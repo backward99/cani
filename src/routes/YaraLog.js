@@ -60,7 +60,6 @@ const YaraLog = ({ UserObj }) => {
                 }
                 return 0;
             })
-            Yara2.sort();
             
         }
     }
@@ -73,7 +72,6 @@ const YaraLog = ({ UserObj }) => {
         setDetectView((prev) => !prev);
     }
 
-    console.log("Yara2", Yara2);
     return (
         <div className="home">
             <div onClick={onClickJson}>
@@ -120,7 +118,7 @@ const YaraLog = ({ UserObj }) => {
                                                                 <>
                                                                     {Yara2.length !== 0 &&
                                                                         <>
-                                                                            {Yara2.map((json, index) => (
+                                                                            {Yara2.sort().map((json, index) => (
                                                                                 <LookJson key={index} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
                                                                             ))}
                                                                         </>
