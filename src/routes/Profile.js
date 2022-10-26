@@ -22,13 +22,15 @@ const Profile = ({ UserObj }) => {
         });
 
     }, [])
-
+    // console.log(Texts[4].data[0]);
     const onClickJson = (event) => {
         if (event.target.tagName !== "BUTTON") return;
-
         if (Texts[+event.target.dataset.number].data[0] !== "undefined" && Texts[+event.target.dataset.number].data[0] !== undefined) {
-            const readJson = Object.entries(Texts[+event.target.dataset.number].data.attributes.last_analysis_results);
+            const readJson = Object.entries(Texts[+event.target.dataset.number].data[0].attributes.last_analysis_results);
             setJson(readJson);
+        console.log("실행");
+            
+
         } else if (Texts[+event.target.dataset.number].data.length === 0) {
             setJson([]);
             console.log(Json);
@@ -54,7 +56,7 @@ const Profile = ({ UserObj }) => {
             </div>
             {Uploading ?
                 <Modal toggle={setUploading}>
-                    <div className={"tlstprud" + (Json.length === 0 && " blank")}>
+                    <div className={"tlstprud" + (Json.length === 0 ? " blank" : "")}>
 
                         {(Json.length === 0) ?
                             <>
