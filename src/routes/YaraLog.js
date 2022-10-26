@@ -4,7 +4,8 @@ import { dbService } from "myBase";
 import React, { useState, useEffect } from "react";
 import "style.css";
 import LookYara from "components/LookYara";
-
+import HelpBt from "components/HelpBt";
+import Modal from "components/Modal";
 
 const YaraLog = ({ UserObj }) => {
 
@@ -60,7 +61,7 @@ const YaraLog = ({ UserObj }) => {
                 }
                 return 0;
             })
-            
+
         }
     }
 
@@ -74,6 +75,7 @@ const YaraLog = ({ UserObj }) => {
 
     return (
         <div className="home">
+            <HelpBt start={1} />
             <div onClick={onClickJson}>
                 {Texts && Texts.map((ican, index) => (
                     <div className="divSiteName" key={index}>
@@ -87,79 +89,54 @@ const YaraLog = ({ UserObj }) => {
                 ))}
             </div>
             {Uploading ?
-                <>
-                    {RpJson.length !== 0 ? <>
-                        <div className="modal">
-                            <button onClick={toggleJson} className="btModal"><h1>X</h1></button>
+                <Modal toggle={setUploading}>
+                    {RpJson.length !== 0 ?
+                        <><div className="tlstprud">
+                            {RpJson.map((json, index) => (
+                                <LookYara key={index} jsonObj2={json} />
+                            ))}
 
-                            <div className="tlstprud">
+                            {Yara.length !== 0 ?
+                                <>{Yara.map((json, index) => (
+                                    <div key={index}>
+                                        {json.constructor !== Object ?
+                                            <><div className="stGrid" onClick={toggleDetect}>
+                                                <h4 className="item">{json}</h4>
+                                                {Yara3.length !== 0 &&
+                                                    <div className="item detect" >{Yara3[0]} : {Yara3[1]}</div>
 
-                                {RpJson.map((json, index) => (
-
+                                                }
+                                            </div></>
+                                            :
+                                            <>{DetectView &&
+                                                <>{Yara2.length !== 0 &&
+                                                    <>{Yara2.sort().map((json, index) => (
+                                                        <LookJson key={index} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
+                                                    ))}
+                                                    </>
+                                                }
+                                                </>
+                                            }
+                                            </>
+                                        }
+                                    </div>
+                                ))}
+                                </>
+                                :
+                                <></>
+                            }
+                        </div></>
+                        :
+                        <><div className="tlstprud">
+                            {Json &&
+                                <>{Json.map((json, index) => (
                                     <LookYara key={index} jsonObj2={json} />
                                 ))}
-
-                                {Yara.length !== 0 ?
-                                    <>
-                                        <>
-                                            {Yara.map((json, index) => (
-                                                <div key={index}>
-                                                    {json.constructor !== Object ?
-                                                        <><div className="stGrid" onClick={toggleDetect}>
-                                                            <h4 className="item">{json}</h4>
-                                                            {Yara3.length !== 0 &&
-                                                                <div className="item detect" >{Yara3[0]} : {Yara3[1]}</div>
-
-                                                            }
-                                                        </div></>
-                                                        :
-                                                        <>
-                                                            {DetectView &&
-                                                                <>
-                                                                    {Yara2.length !== 0 &&
-                                                                        <>
-                                                                            {Yara2.sort().map((json, index) => (
-                                                                                <LookJson key={index} jsonObjKey={json[0]} jsonObjValue={Object.entries(json[1])} />
-                                                                            ))}
-                                                                        </>
-
-                                                                    }
-                                                                </>
-                                                            }
-
-                                                        </>
-                                                    }
-                                                </div>
-                                            ))}
-
-
-
-                                        </>
-
-                                    </>
-                                    :
-                                    <div></div>
-                                }
-                            </div>
-                        </div>
-                    </>
-                        : <>
-                            <div className="modal">
-                                <button onClick={toggleJson} className="btModal"><h1>X</h1></button>
-                                <div className="tlstprud">
-
-                                    {Json &&
-                                        <>
-                                            {Json.map((json, index) => (
-                                                <LookYara key={index} jsonObj2={json} />
-                                            ))}
-                                        </>
-                                    }
-                                </div>
-                            </div>
-                        </>
+                                </>
+                            }
+                        </div></>
                     }
-                </> : <div></div>}
+                </Modal> : <></>}
         </div>
     )
 }

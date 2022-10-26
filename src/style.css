@@ -470,10 +470,16 @@ h4.item {
 
 .help {
     display: flex;
+    
     position: fixed;
     right: 30px;
-    top: 50px;
+    top: 72px;
     background-color: #ffffff00;
+}
+
+img.help{
+    width: 39px;
+    height: 39px;
 }
 
 button:hover {
