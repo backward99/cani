@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/cani/static/css/main.c5d6f413.css",
-    "main.js": "/cani/static/js/main.a0cbce3c.js",
+    "main.js": "/cani/static/js/main.b1d77bd3.js",
     "static/media/help.png": "/cani/static/media/help.585bf08360dae4329cbd.png",
     "static/media/dnsLogo.png": "/cani/static/media/dnsLogo.6086d0b70d5e576098ac.png",
     "static/media/dnsLogo2.png": "/cani/static/media/dnsLogo2.05b01e6a2bf2a9b730fd.png",
     "index.html": "/cani/index.html",
     "main.c5d6f413.css.map": "/cani/static/css/main.c5d6f413.css.map",
-    "main.a0cbce3c.js.map": "/cani/static/js/main.a0cbce3c.js.map"
+    "main.b1d77bd3.js.map": "/cani/static/js/main.b1d77bd3.js.map"
   },
   "entrypoints": [
     "static/css/main.c5d6f413.css",
-    "static/js/main.a0cbce3c.js"
+    "static/js/main.b1d77bd3.js"
   ]
 }
