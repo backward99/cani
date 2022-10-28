@@ -1,4 +1,4 @@
-import Ican from "components/Ican";
+import SiteName from "components/SiteName";
 import LookJson from "components/LookJson";
 import { dbService } from "myBase";
 import React, { useState, useEffect } from "react";
@@ -7,7 +7,7 @@ import HelpBt from "components/HelpBt";
 import Modal from "components/Modal";
 
 
-const Home = ({ UserObj }) => {
+const UrlResult = ({ UserObj }) => {
     const [Texts, setTexts] = useState([]);
     const [Json, setJson] = useState([]);
     const [Uploading, setUploading] = useState(false);
@@ -49,11 +49,11 @@ const Home = ({ UserObj }) => {
 
     return (
         <div className="home">
-            <HelpBt start={0} />
+            <HelpBt start={0} about="url"/>
             <div onClick={onClickJson}>
                 {Texts && Texts.map((ican, index) => (
                     <div className="divSiteName" key={index}>
-                        <Ican
+                        <SiteName
                             key={ican.id}
                             IcanObj={ican}
                         />
@@ -83,4 +83,4 @@ const Home = ({ UserObj }) => {
     )
 }
 
-export default Home;
+export default UrlResult;

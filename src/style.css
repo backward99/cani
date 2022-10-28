@@ -411,7 +411,7 @@ h4.item {
 }
 
 .window {
-    background: coral;
+    background: rgba(255, 255, 255, 0);
     /* width: 350px;
   height: 250px; */
 
@@ -429,6 +429,8 @@ h4.item {
 
 .imgBox {
     display: flex;
+    width: 70vw;
+    height: 70vh;
 }
 
 .img {
@@ -449,7 +451,7 @@ h4.item {
     cursor: pointer;
     font-size: 5.3rem;
     font-weight: bold;
-    color: gray;
+    color: #202124;
     background-color: #ffffff00;
     top: 50%;
     position: fixed;
@@ -470,7 +472,6 @@ h4.item {
 
 .help {
     display: flex;
-    
     position: fixed;
     right: 30px;
     top: 72px;

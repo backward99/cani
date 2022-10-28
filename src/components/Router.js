@@ -1,9 +1,9 @@
 import React from "react";
 import { HashRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import Auth from "../routes/Auth";
-import Home from "../routes/Home";
+import UrlResult from "../routes/UrlResult";
 import Navigation from "./Navigation";
-import Profile from "routes/Profile";
+import FileResult from "routes/FileResult";
 import YaraLog from "routes/YaraLog";
 
 const AppRouter = ({ refreshUser, IsLoggedin, UserObj }) => {
@@ -15,10 +15,10 @@ const AppRouter = ({ refreshUser, IsLoggedin, UserObj }) => {
                 {IsLoggedin ?
                     <>
                         <Route exact path="/">
-                            <Home UserObj={UserObj} />
+                            <UrlResult UserObj={UserObj} />
                         </Route>
-                        <Route path="/profile">
-                            <Profile refreshUser={refreshUser} UserObj={UserObj} />
+                        <Route path="/fileResult">
+                            <FileResult refreshUser={refreshUser} UserObj={UserObj} />
                         </Route>
                         <Route path="/yaraLog">
                             <YaraLog />

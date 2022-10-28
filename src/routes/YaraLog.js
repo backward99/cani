@@ -1,4 +1,4 @@
-import Ican from "components/Ican";
+import SiteName from "components/SiteName";
 import LookJson from "components/LookJson";
 import { dbService } from "myBase";
 import React, { useState, useEffect } from "react";
@@ -75,11 +75,11 @@ const YaraLog = ({ UserObj }) => {
 
     return (
         <div className="home">
-            <HelpBt start={1} />
+            <HelpBt start={0} about="yara" />
             <div onClick={onClickJson}>
                 {Texts && Texts.map((ican, index) => (
                     <div className="divSiteName" key={index}>
-                        <Ican
+                        <SiteName
                             key={ican.id}
                             IcanObj={ican}
                             Index={index}

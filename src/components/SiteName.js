@@ -1,6 +1,6 @@
 import React from "react";
 
-const Ican = ({ IcanObj}) => {
+const SiteName = ({ IcanObj}) => {
     return (
         <div >
             <h2 className="siteName">{IcanObj.id}</h2>
@@ -8,4 +8,4 @@ const Ican = ({ IcanObj}) => {
     )
 }
 
-export default Ican;
+export default SiteName;

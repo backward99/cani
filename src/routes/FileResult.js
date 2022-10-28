@@ -1,4 +1,4 @@
-import Ican from "components/Ican";
+import SiteName from "components/SiteName";
 import LookJson from "components/LookJson";
 import { dbService } from "myBase";
 import React, { useState, useEffect } from "react";
@@ -7,7 +7,7 @@ import HelpBt from "components/HelpBt";
 import Modal from "components/Modal";
 
 
-const Profile = ({ UserObj }) => {
+const FileResult = ({ UserObj }) => {
     const [Texts, setTexts] = useState([]);
     const [Json, setJson] = useState([]);
     const [Uploading, setUploading] = useState(false);
@@ -28,7 +28,6 @@ const Profile = ({ UserObj }) => {
         if (Texts[+event.target.dataset.number].data[0] !== "undefined" && Texts[+event.target.dataset.number].data[0] !== undefined) {
             const readJson = Object.entries(Texts[+event.target.dataset.number].data[0].attributes.last_analysis_results);
             setJson(readJson);
-        console.log("실행");
             
 
         } else if (Texts[+event.target.dataset.number].data.length === 0) {
@@ -42,11 +41,11 @@ const Profile = ({ UserObj }) => {
 
     return (
         <div className="home">
-            <HelpBt start={1} />
+            <HelpBt start={0} about="file" />
             <div onClick={onClickJson}>
                 {Texts && Texts.map((ican, index) => (
                     <div className="divSiteName" key={index}>
-                        <Ican
+                        <SiteName
                             key={ican.id} 
                             IcanObj={ican} 
                             Index={index}/>
@@ -89,4 +88,4 @@ const Profile = ({ UserObj }) => {
 }
 
 
-export default Profile;
+export default FileResult;

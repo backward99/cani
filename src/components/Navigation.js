@@ -27,7 +27,7 @@ const Navigation = ({refreshUser, UserObj }) => {
                             <Link to="/"  className={location.pathname ==="/" ? "selected" : ""} >Url Scan Result</Link>
                         </li>
                         <li className={"selectNav" } >
-                            <Link to="/profile" className={location.pathname.match("/profile") ? "selected" : ""} >File Scan Result</Link>
+                            <Link to="/fileResult" className={location.pathname.match("/fileResult") ? "selected" : ""} >File Scan Result</Link>
                         </li >
                         <li className={ "selectNav"} >
                             <Link to="/yaraLog" className={location.pathname.match("/yaraLog") ? "selected" : ""} >Yara Log</Link>
