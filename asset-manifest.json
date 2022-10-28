@@ -1,16 +1,28 @@
 {
   "files": {
-    "main.css": "/cani/static/css/main.c5d6f413.css",
-    "main.js": "/cani/static/js/main.74fd6903.js",
+    "main.css": "/cani/static/css/main.bdf57dc2.css",
+    "main.js": "/cani/static/js/main.63f59fdd.js",
+    "static/media/file_scan_guide_2.jpg": "/cani/static/media/file_scan_guide_2.a7eb20504efbb0a9e73a.jpg",
+    "static/media/url_scan_guide_2.jpg": "/cani/static/media/url_scan_guide_2.6b15345f5b2e16579bec.jpg",
+    "static/media/url_scan_guide_4.jpg": "/cani/static/media/url_scan_guide_4.3a982b285ca5bb5a4941.jpg",
+    "static/media/yara_scan_guide_3.jpg": "/cani/static/media/yara_scan_guide_3.edea27ebdb516af77c57.jpg",
     "static/media/help.png": "/cani/static/media/help.585bf08360dae4329cbd.png",
+    "static/media/yara_scan_guide_1.jpg": "/cani/static/media/yara_scan_guide_1.ec60e89f1873aea55a9b.jpg",
+    "static/media/yara_scan_guide_2.jpg": "/cani/static/media/yara_scan_guide_2.b40e91548ff69af40d8c.jpg",
+    "static/media/file_scan_guide_1.jpg": "/cani/static/media/file_scan_guide_1.3d5f3e4d56848b3d643e.jpg",
+    "static/media/url_scan_guide_1.png": "/cani/static/media/url_scan_guide_1.7833867b705caea1600a.png",
+    "static/media/file_scan_guide_3.jpg": "/cani/static/media/file_scan_guide_3.bcc85f4396d8cf2af51b.jpg",
+    "static/media/file_scan_guide_4.jpg": "/cani/static/media/file_scan_guide_4.8f0301cfc15d6ab1cce8.jpg",
+    "static/media/file_scan_guide_5.jpg": "/cani/static/media/file_scan_guide_5.d5aa20b072a09e76e3d3.jpg",
+    "static/media/url_scan_guide_3.jpg": "/cani/static/media/url_scan_guide_3.db41215f311e787c81b9.jpg",
     "static/media/dnsLogo.png": "/cani/static/media/dnsLogo.6086d0b70d5e576098ac.png",
     "static/media/dnsLogo2.png": "/cani/static/media/dnsLogo2.05b01e6a2bf2a9b730fd.png",
     "index.html": "/cani/index.html",
-    "main.c5d6f413.css.map": "/cani/static/css/main.c5d6f413.css.map",
-    "main.74fd6903.js.map": "/cani/static/js/main.74fd6903.js.map"
+    "main.bdf57dc2.css.map": "/cani/static/css/main.bdf57dc2.css.map",
+    "main.63f59fdd.js.map": "/cani/static/js/main.63f59fdd.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5d6f413.css",
-    "static/js/main.74fd6903.js"
+    "static/css/main.bdf57dc2.css",
+    "static/js/main.63f59fdd.js"
   ]
 }
