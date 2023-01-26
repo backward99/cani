@@ -19,40 +19,39 @@
     - github pages
 
 ### 주요 기능
-
-- 원하는 내용을 스캔하면 검색결과로 파일이 제공됩니다. 파일로 나온 결과가 어떤지 사용자가 보기 쉽게 하기 위한 웹입니다.  스캔된 검사 결과를 카테고리 별로 나누었습니다. 원하는 내용을 클릭해 확인할 수 있습니다.
-- 로그인 기능
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/57629d61-b773-4d9f-8f2e-d36d398a0261/Untitled.png)
     
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dc67e792-b154-420c-9c62-921f5cd6c70d/Untitled.png)
+- 원하는 내용을 스캔하면 검색결과로 파일이 제공됩니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/90a84385-e370-4bef-afc6-ef77bf26a288/Untitled.png)
+    ![스크린샷(241)](https://user-images.githubusercontent.com/86753969/214744680-52546a2e-de49-4d6a-83f3-c2cf81ad7cfe.png)
 
-- 데이터 불러오기
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7976928b-3780-4d80-897d-3979524eee71/Untitled.png)
-    
-- 데이터 자료형 구분
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cd232f03-b53d-4240-9739-348d8c80d8f7/Untitled.png)
-    
-- 화면 구성
+- 파일로 나온 결과가 어떤지 사용자가 보기 쉽게 하기 위한 웹입니다. 스캔된 검사 결과를 카테고리 별로 나누었습니다. 원하는 내용을 클릭해 확인할 수 있습니다.
 
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16f15a1c-7861-4761-9939-7fb6efac8c53/Untitled.png)
+    ![스크린샷(242)](https://user-images.githubusercontent.com/86753969/214744803-4fbb56e6-6f54-4686-a874-c69340dde341.png)
+    
+    ![스크린샷(243)](https://user-images.githubusercontent.com/86753969/214744823-b6161600-2fc2-4614-8443-e36b194dc531.png)
 
+    
 ### 문제 해결
 
 - 악의적인 목적으로 사이트를 이용할 수 있다는 문제점 제기
     - 특정 사용자만 이용할 수 있도록 로그인 기능 사용
+        
+        ![image](https://user-images.githubusercontent.com/86753969/214744068-539e61bf-5b32-409e-a192-bde195701929.png)
+    
+        ![스크린샷(239)](https://user-images.githubusercontent.com/86753969/214744240-21423add-1290-42da-b493-9f5348797bd8.png)
+    
 - 어떤 결과가 악성코드가 탐지된 것인지 사용자가 알아보기 힘들 수 있다는 문제점 제기
     - ?를 클릭하여 해당 카테고리 별로 이미지 설명을 추가
+    
+        ![스크린샷(246)](https://user-images.githubusercontent.com/86753969/214744865-46538011-6687-4716-bf5d-56df13677ff4.png)
+    
 - 검사결과가 일정한 데이터 형식으로 나오지 않는다는 문제점 발견
     - 자료형 검사 후 다른 방식으로 처리
 - 검사된 결과를 바로 보여주는 것보다 클릭하면 결과를 상세히 보여주자는 의견
-    
-    ![스크린샷(248).png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/552fb5b3-b4be-4854-8433-fa149ccff4eb/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7(248).png)
+
+    ![스크린샷(248)](https://user-images.githubusercontent.com/86753969/214745255-c87ac495-78f7-4bcb-9e89-c05cb6d9fb44.png)
+
     
 - json 데이터를 받아서 처리할 때 오류 발견
     - Object로 json데이터 가공
